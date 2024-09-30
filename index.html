@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SuprizeMe - Personalized Tech Gifts</title>
+    <link rel="icon" href="10.jpeg" type="image/png"> <!-- Favicon -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f06, #48f);
+            overflow-x: hidden;
+        }
+        /* Splash Screen */
+        #splash {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10; /* Ensure splash is above all content */
+            animation: fadeOut 3s forwards 2s;
+        }
+        #splash img {
+            width: 200px;
+            height: auto;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        @keyframes zoomIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: white; /* Header color */
+            padding: 20px;
+            text-align: center;
+            color: #1abc9c; /* Text color */
+            animation: slideDown 1s ease-out;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            width: 150px; /* Logo size */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        @keyframes slideDown {
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Sections */
+        section {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-in;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        .cta-button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+        .faq {
+            margin: 10px 0;
+        }
+        .faq h3 {
+            color: #34495e;
+        }
+
+        /* Team Section */
+        .team {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            width: 30%;
+            text-align: center;
+            margin: 10px;
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .team-member h3 {
+            color: #2980b9;
+        }
+        .team-member p {
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+
+        /* Video Section */
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        video {
+            width: 100%;
+            max-width: 600px; /* Set max width for the video */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Splash Screen -->
+    <div id="splash">
+        <img src="10.jpeg" alt="SuprizeMe Logo">
+    </div>
+
+    <!-- Main Content -->
+    <header>
+        <img src="10.jpeg" alt="SuprizeMe Logo"> <!-- Logo in Header -->
+        <h1>SuprizeMe</h1>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#faq">FAQ</a>
+            <a href="#team">Our Team</a>
+            <a href="#video">Video</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container" style="display: none;"> <!-- Hide content initially -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to SuprizeMe, your destination for personalized and high-tech gifts. Whether it's a birthday, Teacher's Day, or any event, we create custom videos, apps, websites, and more. Our affordable and innovative gifts start at just ₹10, with the first 10 gifts offered for free. SuprizeMe is a team of creative tech enthusiasts who deliver unique, memorable experiences in the form of digital products.</p>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <h3>1. What kind of gifts do you offer?</h3>
+                <p>We specialize in personalized tech gifts such as videos, websites, apps, and creative digital cards, all designed for various occasions.</p>
+            </div>
+
+            <div class="faq">
+                <h3>2. How can I place an order?</h3>
+                <p>Simply reach out to us via Instagram DM with your requirements, and we'll craft a custom gift for you in just 5 days.</p>
+            </div>
+
+            <div class="faq">
+                <h3>3. Are the first 10 gifts free?</h3>
+                <p>Yes! The first 10 orders are absolutely free to show you what we can create for you.</p>
+            </div>
+        </section>
+
+        <section id="video" class="video-container">
+            <h2>Watch Our Video</h2>
+            <video controls controlsList="nodownload">
+                <source src="ud.mp4" type="video/mp4"> <!-- Replace with your video -->
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="team">
+            <h2>Meet Our Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="1.png" alt="Team Member 1">
+                    <h3>Navin Vignesh</h3>
+                    <p>Account Manager & Messenger</p>
+                </div>
+                <div class="team-member">
+                    <img src="2.jpg" alt="Team Member 2">
+                    <h3>Jai Akash</h3>
+                    <p>Payments Manager</p>
+                </div>
+                <div class="team-member">
+                    <img src="cover.png" alt="Team Member 3">
+                    <h3>M.Krishna</h3>
+                    <p>Founder & Chief Developer</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Ready to place an order or have any questions? Reach out to us on Instagram, and let’s create something amazing together!</p>
+            <a class="cta-button" href="https://www.instagram.com/krishnamanojkumar0312" target="_blank">DM Us on Instagram</a>
+        </section>
+    </div>
+
+    <script>
+        // Show the main content after splash animation
+        const splash = document.getElementById('splash');
+        const content = document.querySelector('.container');
+        splash.addEventListener('animationend', () => {
+            splash.style.display = 'none'; // Hide splash
+            content.style.display = 'block'; // Show content
+        });
+    </script>
+</body>
+</html>
